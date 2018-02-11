@@ -1,0 +1,90 @@
+<!--
+  Generated template for the MusicPlayerPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<!--<ion-header>
+  <ion-navbar>
+    <ion-title>music-player</ion-title>
+  </ion-navbar>
+</ion-header>-->
+
+<div class="bg blur" id="bg"></div>
+<div class="bg-mask" style="opacity:0.6;"></div>
+<div class="content">
+  <ion-slides pager color="fff">
+    <ion-slide>
+      <ion-grid fixed no-padding >
+        <ion-row justify-content-center align-items-center>
+          <ion-col align-self-center class="text-center">
+            <img  class="cover animate" src="assets/imgs/default_cover.png">
+          </ion-col>
+        </ion-row>
+        <ion-row style="margin-top: 1rem">
+          <ion-col>
+            <span style="color: #f4f4f4;font-size: 1.1rem">歌词</span>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-slide>
+    <ion-slide>
+      <div  style="min-height:30rem">Slide 2</div>
+    </ion-slide>
+
+    <ion-slide>
+      <div  style="min-height:30rem">Slide 3</div>
+    </ion-slide>
+  </ion-slides>
+
+</div>
+<div class="control">
+  <ion-range color="secondary" no-padding>
+    <ion-label range-left style="color: #808080;">00:00</ion-label>
+    <ion-label range-right style="color: #808080;">03:00</ion-label>
+  </ion-range>
+  <div class="player-btns">
+    <ion-grid fixed no-padding>
+      <ion-row justify-content-center align-items-center>
+        <ion-col align-self-center class="text-center">
+          <img src="assets/imgs/player_btn_random_normal.png" class="player-btn-s" *ngIf="playMode==='random'">
+          <img src="assets/imgs/player_btn_repeat_normal.png" class="player-btn-s" *ngIf="playMode==='repeat'">
+          <img src="assets/imgs/player_btn_repeatone_normal.png" class="player-btn-s" *ngIf="playMode==='repeatOne'">
+        </ion-col>
+        <ion-col align-self-center class="text-center">
+          <img src="assets/imgs/player_btn_pre_normal.png" class="player-btn">
+        </ion-col>
+        <ion-col align-self-center class="text-center">
+          <img src="assets/imgs/player_btn_play_normal.png" *ngIf="!isPlaying" class="player-btn-l">
+          <img src="assets/imgs/player_btn_pause_normal.png" *ngIf="isPlaying" class="player-btn-l">
+        </ion-col>
+        <ion-col align-self-center class="text-center">
+          <img src="assets/imgs/player_btn_next_normal.png" class="player-btn">
+        </ion-col>
+        <ion-col align-self-center class="text-center">
+          <img src="assets/imgs/player_btn_playlist_normal.png" class="player-btn-s">
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+  <div class="other-btns">
+    <ion-grid fixed no-padding>
+      <ion-row justify-content-center align-items-center>
+        <ion-col align-self-center class="text-center">
+          <img src="assets/imgs/player_btn_favorite_normal.png" class="other-btn" *ngIf="!favorited">
+          <img src="assets/imgs/player_btn_favorited_normal.png" class="other-btn" *ngIf="favorited">
+        </ion-col>
+        <ion-col align-self-center class="text-center">
+          <img src="assets/imgs/player_btn_download_normal.png" class="other-btn">
+        </ion-col>
+        <ion-col align-self-center class="text-center">
+          <img src="assets/imgs/player_btn_share_normal.png" class="other-btn">
+        </ion-col>
+        <ion-col align-self-center class="text-center">
+          <img src="assets/imgs/player_btn_comment_long.png" class="other-btn">
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+</div>
+

@@ -1,0 +1,11 @@
+{
+  "name": "ng2-music-player-mobile",
+  "app_id": "",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  },
+  "proxies":{
+
+  }
+}
