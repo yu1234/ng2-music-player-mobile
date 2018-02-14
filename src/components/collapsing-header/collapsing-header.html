@@ -1,0 +1,11 @@
+<div class="transparent-header"  [ngStyle]="headerBackground">
+  <ng-content select="[slot='toolbar']" >
+  </ng-content>
+  <div #contentWrapper>
+    <ng-content select="[slot='content']" >
+    </ng-content>
+  </div>
+</div>
+
+
+
