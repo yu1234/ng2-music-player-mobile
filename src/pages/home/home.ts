@@ -1,16 +1,27 @@
-import { Component } from '@angular/core';
-import {IonicPage, NavController} from 'ionic-angular';
-import {CommonProvider} from "../../providers/common/common";
+import {AfterViewInit, Component} from '@angular/core';
+import {IonicPage} from 'ionic-angular';
+import {StatusBar} from "@ionic-native/status-bar";
 
 @IonicPage()
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
 })
-export class HomePage {
+export class HomePage implements AfterViewInit {
 
-  constructor(public navCtrl: NavController,public commonProvider: CommonProvider) {
+  section: string = 'two';
+  somethings: any = new Array(20);
+
+  constructor(private statusBar: StatusBar) {
 
   }
 
+  ngAfterViewInit(): void {
+    // let status bar overlay webview
+    this.statusBar.overlaysWebView(true);
+  }
+
+  public collapsingChange(event: boolean) {
+    console.log('collapsingChange', event);
+  }
 }

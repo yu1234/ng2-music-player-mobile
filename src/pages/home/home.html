@@ -1,12 +1,51 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
-  </ion-navbar>
+  <collapsing-header [scrollArea]="myContent" headerHeight="125" title="home page" (collapsingChange)="collapsingChange($event)" backgroundImg="assets/imgs/test.jpg">
+    <ion-toolbar  slot="toolbar">
+      <ion-buttons start>
+        <button ion-button icon-only color="royal">
+          <ion-icon name="search"></ion-icon>
+        </button>
+      </ion-buttons>
+      <ion-title>Send To...</ion-title>
+      <ion-buttons end>
+        <button ion-button icon-only color="royal">
+          <ion-icon name="person-add"></ion-icon>
+        </button>
+      </ion-buttons>
+    </ion-toolbar>
+  </collapsing-header>
 </ion-header>
+<ion-content padding fullscreen #myContent>
+  <div [ngSwitch]="section">
 
-<ion-content padding>
-  <button ion-button (click)="navCtrl.push('MusicListPage')">go to music player list</button>
-  <button ion-button (click)="navCtrl.push('TopListPage')">go to top list(test)</button>
+    <ion-list *ngSwitchCase="'one'">
+      <ion-item *ngFor="let something of somethings">
+        <ion-thumbnail item-left>
+          <img src="https://avatars.io/instagram/unknown">
+        </ion-thumbnail>
+        <h2>Something</h2>
+      </ion-item>
+    </ion-list>
+
+    <ion-list *ngSwitchCase="'two'">
+      <ion-item *ngFor="let something of somethings">
+        <ion-thumbnail item-left>
+          <img src="https://avatars.io/instagram/unknown">
+        </ion-thumbnail>
+        <h2>Something</h2>
+      </ion-item>
+    </ion-list>
+
+    <ion-list *ngSwitchCase="'three'">
+      <ion-item *ngFor="let something of somethings">
+        <ion-thumbnail item-left>
+          <img src="https://avatars.io/instagram/unknown">
+        </ion-thumbnail>
+        <h2>Something</h2>
+      </ion-item>
+    </ion-list>
+
+  </div>
+  <!--  <button ion-button (click)="navCtrl.push('MusicListPage')">go to music player list</button>
+    <button ion-button (click)="navCtrl.push('TopListPage')">go to top list(testqqqq)</button>-->
 </ion-content>

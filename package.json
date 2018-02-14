@@ -9,7 +9,7 @@
     "build": "ionic-app-scripts build",
     "lint": "ionic-app-scripts lint",
     "ionic:build": "ionic-app-scripts build",
-    "ionic:serve": "ionic-app-scripts serve",
+    "ionic:serve": "ionic serve -c",
     "ionic:android build": "ionic cordova build android",
     "ionic:android run": "ionic cordova run android"
   },
@@ -34,6 +34,7 @@
     "cordova-android": "^7.0.0",
     "cordova-plugin-device": "^1.1.4",
     "cordova-plugin-file": "^6.0.1",
+    "cordova-plugin-ionic": "^3.1.1",
     "cordova-plugin-ionic-webview": "^1.1.16",
     "cordova-plugin-media": "^5.0.2",
     "cordova-plugin-nativeaudio": "^3.0.9",
@@ -49,6 +50,7 @@
     "zone.js": "0.8.18"
   },
   "devDependencies": {
+    "@angular/cli": "^1.6.8",
     "@ionic/app-scripts": "^3.1.8",
     "typescript": "2.4.2"
   },

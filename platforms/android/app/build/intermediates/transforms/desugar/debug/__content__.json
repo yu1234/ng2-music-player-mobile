@@ -1,0 +1,1 @@
+[{"name":":CordovaLib","index":0,"scopes":["SUB_PROJECTS"],"types":["CLASSES"],"format":"JAR","present":true},{"name":"064cbbaa1bdbc2f827713ac01f5b5e3a4400397b","index":1,"scopes":["PROJECT"],"types":["CLASSES"],"format":"DIRECTORY","present":true},{"name":"org.greenrobot:eventbus:3.1.1","index":2,"scopes":["EXTERNAL_LIBRARIES"],"types":["CLASSES"],"format":"JAR","present":true}]

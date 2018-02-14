@@ -1,0 +1,4 @@
+#Sat Feb 10 22:19:50 CST 2018
+base.0=F\:\\workplace\\ng2-music-player-mobile\\platforms\\android\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\254
+renamed.0=classes.dex
+file.0=F\:\\workplace\\ng2-music-player-mobile\\platforms\\android\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\254\\classes.dex

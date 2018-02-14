@@ -10,16 +10,18 @@ import {NativeStorage} from '@ionic-native/native-storage';
 import {NativeAudio} from '@ionic-native/native-audio';
 import {Media} from '@ionic-native/media';
 
-
 import {MyApp} from './app.component';
 import {CommonProvider} from '../providers/common/common';
 import {AjaxProvider} from '../providers/ajax/ajax';
 import {GlobalProvider} from '../providers/global/global';
 import {AudioProvider} from '../providers/audio/audio';
 
+
+
 Pro.init('237a2431!', {
   appVersion: '0.0.1'
 })
+
 @Injectable()
 export class MyErrorHandler implements ErrorHandler {
   ionicErrorHandler: IonicErrorHandler;
@@ -48,7 +50,7 @@ export class MyErrorHandler implements ErrorHandler {
   imports: [
     BrowserModule,
     HttpClientModule,
-    IonicModule.forRoot(MyApp, {mode: 'md'})
+    IonicModule.forRoot(MyApp, {mode: 'md'}),
   ],
   bootstrap: [IonicApp],
   entryComponents: [
