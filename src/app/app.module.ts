@@ -9,13 +9,13 @@ import {Toast} from '@ionic-native/toast';
 import {NativeStorage} from '@ionic-native/native-storage';
 import {NativeAudio} from '@ionic-native/native-audio';
 import {Media} from '@ionic-native/media';
+import {Keyboard} from '@ionic-native/keyboard';
 
 import {MyApp} from './app.component';
 import {CommonProvider} from '../providers/common/common';
 import {AjaxProvider} from '../providers/ajax/ajax';
 import {GlobalProvider} from '../providers/global/global';
 import {AudioProvider} from '../providers/audio/audio';
-
 
 
 Pro.init('237a2431!', {
@@ -50,7 +50,18 @@ export class MyErrorHandler implements ErrorHandler {
   imports: [
     BrowserModule,
     HttpClientModule,
-    IonicModule.forRoot(MyApp, {mode: 'md'}),
+    IonicModule.forRoot(MyApp, {
+      scrollPadding: false,
+      scrollAssist: true,
+      autoFocusAssist: false,
+      platforms: {
+        ios: {
+        },
+        android: {
+          mode: 'md'
+        }
+      }
+    }),
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -63,6 +74,7 @@ export class MyErrorHandler implements ErrorHandler {
     NativeStorage,
     NativeAudio,
     Media,
+    Keyboard,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     GlobalProvider,
     CommonProvider,

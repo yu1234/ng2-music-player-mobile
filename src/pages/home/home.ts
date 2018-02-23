@@ -17,8 +17,6 @@ export class HomePage implements AfterViewInit {
   }
 
   ngAfterViewInit(): void {
-    // let status bar overlay webview
-    this.statusBar.overlaysWebView(true);
   }
 
   public collapsingChange(event: boolean) {
